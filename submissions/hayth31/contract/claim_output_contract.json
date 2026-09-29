@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://sydon.ai/schemas/claim_output_contract.json",
+  "title": "RecoveryManagerClaimOutputContract",
+  "description": "Standard output contract for each evaluated fee charge, containing the verdict, defensible claim package, and supporting evidence trail.",
+  "type": "object",
+  "required": [
+    "line_id",
+    "unit_id",
+    "org_id",
+    "charge_type",
+    "verdict",
+    "claim_recommended",
+    "claim_amount_usd",
+    "confidence_score",
+    "evaluation_timestamp"
+  ],
+  "properties": {
+    "line_id": { "type": "string", "example": "FEE-0014-1" },
+    "unit_id": { "type": "string", "example": "UNIT-0014" },
+    "org_id": { "type": "string", "example": "org_demo_alpha" },
+    "sku": { "type": ["string", "null"], "example": "SKU-LAMP-LED" },
+    "charge_type": { "type": "string", "example": "inbound_defect_fee" },
+    "assessed_amount_usd": { "type": "number", "example": 2.00 },
+    "verdict": {
+      "type": "string",
+      "enum": ["CONTRADICTED", "SUPPORTED", "SILENT", "UNCERTAIN", "ALREADY_REIMBURSED", "DUPLICATE"],
+      "description": "CONTRADICTED = Evidence proves fee was wrongly assessed; SUPPORTED = Defect verified; SILENT = No evidence found; UNCERTAIN = Conflicting/unclear evidence."
+    },
+    "claim_recommended": {
+      "type": "boolean",
+      "description": "True only if verdict is CONTRADICTED or DUPLICATE and meets defensibility threshold."
+    },
+    "claim_amount_usd": {
+      "type": "number",
+      "description": "Calculated recoverable claim amount in USD."
+    },
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "example": 0.98
+    },
+    "dispute_grounds": {
+      "type": "string",
+      "description": "Formal legal/operational statement for filing dispute with channel."
+    },
+    "cited_channel_policy": {
+      "type": "object",
+      "properties": {
+        "policy_name": { "type": "string" },
+        "source_url": { "type": "string" },
+        "rule_key": { "type": "string" }
+      }
+    },
+    "evidence_chain": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["manager", "record_id", "observed_findings"],
+        "properties": {
+          "manager": { "type": "string", "enum": ["RECEIVING_MANAGER", "PREP_MANAGER", "PACK_MANAGER", "RETURNS_MANAGER"] },
+          "record_id": { "type": "string" },
+          "observed_findings": { "type": "string" },
+          "photo_refs": { "type": ["string", "null"] },
+          "operator_id": { "type": ["string", "null"] },
+          "timestamp": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "explanation_if_unsupported": {
+      "type": ["string", "null"],
+      "description": "Mandatory explanation when a claim cannot be recommended (due to SUPPORTED, SILENT, or UNCERTAIN)."
+    },
+    "human_override": {
+      "type": "object",
+      "properties": {
+        "is_overridden": { "type": "boolean", "default": false },
+        "original_verdict": { "type": ["string", "null"] },
+        "new_verdict": { "type": ["string", "null"] },
+        "override_reason": { "type": ["string", "null"] },
+        "operator_id": { "type": ["string", "null"] },
+        "overridden_at": { "type": ["string", "null"], "format": "date-time" }
+      }
+    },
+    "evaluation_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

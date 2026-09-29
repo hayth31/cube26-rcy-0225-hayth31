@@ -1,0 +1,2987 @@
+{
+  "org_demo_alpha": [
+    {
+      "line_id": "FEE-0002-1",
+      "unit_id": "UNIT-0002",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CANDLE-3",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $4.25 is within authoritative tier fee ($4.25).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0002",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0002_pallet.jpg;fixtures/receiving/UNIT-0002_carton.jpg;fixtures/receiving/UNIT-0002_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-03T13:25:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0002",
+          "observed_findings": "FNSKU=on_seam, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0002_front.jpg;fixtures/prep/UNIT-0002_back.jpg;fixtures/prep/UNIT-0002_label.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-04T12:25:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0005-1",
+      "unit_id": "UNIT-0005",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LEASH-6FT",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0005-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0005\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0005 (SKU: SKU-LEASH-6FT) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0005, 2026-06-09T07:54:00Z): Intake qty=10, carton_dmg=tears, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0005_pallet.jpg;fixtures/receiving/UNIT-0005_carton.jpg;fixtures/receiving/UNIT-0005_unit.jpg]\n  - PREP_MANAGER (PRP-0005, 2026-06-10T04:54:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0005_front.jpg;fixtures/prep/UNIT-0005_back.jpg;fixtures/prep/UNIT-0005_label.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0005",
+          "observed_findings": "Intake qty=10, carton_dmg=tears, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0005_pallet.jpg;fixtures/receiving/UNIT-0005_carton.jpg;fixtures/receiving/UNIT-0005_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-09T07:54:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0005",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0005_front.jpg;fixtures/prep/UNIT-0005_back.jpg;fixtures/prep/UNIT-0005_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-10T04:54:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0007-1",
+      "unit_id": "UNIT-0007",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0007",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=wrong_colour",
+          "photo_refs": "fixtures/receiving/UNIT-0007_pallet.jpg;fixtures/receiving/UNIT-0007_carton.jpg;fixtures/receiving/UNIT-0007_unit.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-07T23:21:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0007",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0007_front.jpg;fixtures/prep/UNIT-0007_back.jpg;fixtures/prep/UNIT-0007_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-09T22:21:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0011-1",
+      "unit_id": "UNIT-0011",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-PUZZLE-500",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0011",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0011_pallet.jpg;fixtures/receiving/UNIT-0011_carton.jpg;fixtures/receiving/UNIT-0011_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-04T23:12:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0011",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0011_front.jpg;fixtures/prep/UNIT-0011_back.jpg;fixtures/prep/UNIT-0011_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-05T11:12:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0013-1",
+      "unit_id": "UNIT-0013",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LEASH-6FT",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0013",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0013_pallet.jpg;fixtures/receiving/UNIT-0013_carton.jpg;fixtures/receiving/UNIT-0013_unit.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-07T07:53:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0013",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0013_front.jpg;fixtures/prep/UNIT-0013_back.jpg;fixtures/prep/UNIT-0013_label.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-07T11:53:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0014-1",
+      "unit_id": "UNIT-0014",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LAMP-LED",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 2.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 2.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0014-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: inbound_defect_fee ($2.00) for Unit UNIT-0014\nGoverning Policy: FBA Inbound Defect & Performance Fee Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/G201850100)\n\nCase Summary:\nThe fee of $2.00 assessed against unit UNIT-0014 (SKU: SKU-LAMP-LED) is contradicted by verified warehouse operational evidence. Under FBA Inbound Defect & Performance Fee Dispute Policy, we request a reimbursement credit of $2.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0014, 2026-06-04T14:36:00Z): Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0014_pallet.jpg;fixtures/receiving/UNIT-0014_carton.jpg;fixtures/receiving/UNIT-0014_unit.jpg]\n  - PREP_MANAGER (PRP-0014, 2026-06-06T07:36:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0014_front.jpg;fixtures/prep/UNIT-0014_back.jpg;fixtures/prep/UNIT-0014_label.jpg]\n  - RETURNS_MANAGER (RTN-0014, 2026-07-18T07:36:00Z): Observed state: signs_of_use, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0014_1.jpg;fixtures/returns/UNIT-0014_2.jpg;fixtures/returns/UNIT-0014_3.jpg]\n\nAction Requested:\nReimburse $2.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0014",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0014_pallet.jpg;fixtures/receiving/UNIT-0014_carton.jpg;fixtures/receiving/UNIT-0014_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-04T14:36:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0014",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0014_front.jpg;fixtures/prep/UNIT-0014_back.jpg;fixtures/prep/UNIT-0014_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-06T07:36:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0014",
+          "observed_findings": "Observed state: signs_of_use, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0014_1.jpg;fixtures/returns/UNIT-0014_2.jpg;fixtures/returns/UNIT-0014_3.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-07-18T07:36:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0014-2",
+      "unit_id": "UNIT-0014",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LAMP-LED",
+      "charge_type": "lost_inbound",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 25.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0014-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: lost_inbound ($0.00) for Unit UNIT-0014\nGoverning Policy: FBA Lost and Damaged Inventory Reimbursement Policy (https://sellercentral.amazon.com/help/hub/reference/G200213130)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0014 (SKU: SKU-LAMP-LED) is contradicted by verified warehouse operational evidence. Under FBA Lost and Damaged Inventory Reimbursement Policy, we request a reimbursement credit of $25.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0014, 2026-06-04T14:36:00Z): Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0014_pallet.jpg;fixtures/receiving/UNIT-0014_carton.jpg;fixtures/receiving/UNIT-0014_unit.jpg]\n  - PREP_MANAGER (PRP-0014, 2026-06-06T07:36:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0014_front.jpg;fixtures/prep/UNIT-0014_back.jpg;fixtures/prep/UNIT-0014_label.jpg]\n  - RETURNS_MANAGER (RTN-0014, 2026-07-18T07:36:00Z): Observed state: signs_of_use, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0014_1.jpg;fixtures/returns/UNIT-0014_2.jpg;fixtures/returns/UNIT-0014_3.jpg]\n\nAction Requested:\nReimburse $25.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Lost and Damaged Inventory Reimbursement Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200213130",
+        "rule_key": "LOST_INBOUND_INVENTORY_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0014",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0014_pallet.jpg;fixtures/receiving/UNIT-0014_carton.jpg;fixtures/receiving/UNIT-0014_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-04T14:36:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0014",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0014_front.jpg;fixtures/prep/UNIT-0014_back.jpg;fixtures/prep/UNIT-0014_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-06T07:36:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0014",
+          "observed_findings": "Observed state: signs_of_use, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0014_1.jpg;fixtures/returns/UNIT-0014_2.jpg;fixtures/returns/UNIT-0014_3.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-07-18T07:36:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0014-3",
+      "unit_id": "UNIT-0014",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LAMP-LED",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.75,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.25,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0014-3\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.75) for Unit UNIT-0014\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.75 assessed against unit UNIT-0014 (SKU: SKU-LAMP-LED) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.25.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0014, 2026-06-04T14:36:00Z): Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0014_pallet.jpg;fixtures/receiving/UNIT-0014_carton.jpg;fixtures/receiving/UNIT-0014_unit.jpg]\n  - PREP_MANAGER (PRP-0014, 2026-06-06T07:36:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0014_front.jpg;fixtures/prep/UNIT-0014_back.jpg;fixtures/prep/UNIT-0014_label.jpg]\n  - RETURNS_MANAGER (RTN-0014, 2026-07-18T07:36:00Z): Observed state: signs_of_use, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0014_1.jpg;fixtures/returns/UNIT-0014_2.jpg;fixtures/returns/UNIT-0014_3.jpg]\n\nAction Requested:\nReimburse $1.25 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0014",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0014_pallet.jpg;fixtures/receiving/UNIT-0014_carton.jpg;fixtures/receiving/UNIT-0014_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-04T14:36:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0014",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0014_front.jpg;fixtures/prep/UNIT-0014_back.jpg;fixtures/prep/UNIT-0014_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-06T07:36:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0014",
+          "observed_findings": "Observed state: signs_of_use, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0014_1.jpg;fixtures/returns/UNIT-0014_2.jpg;fixtures/returns/UNIT-0014_3.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-07-18T07:36:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0014-4",
+      "unit_id": "UNIT-0014",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LAMP-LED",
+      "charge_type": "refund_issued_item_not_returned",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 15.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0014-4\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: refund_issued_item_not_returned ($0.00) for Unit UNIT-0014\nGoverning Policy: Customer Returns and Seller Reimbursements (45-Day Rule) (https://sellercentral.amazon.com/help/hub/reference/G200379860)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0014 (SKU: SKU-LAMP-LED) is contradicted by verified warehouse operational evidence. Under Customer Returns and Seller Reimbursements (45-Day Rule), we request a reimbursement credit of $15.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0014, 2026-06-04T14:36:00Z): Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0014_pallet.jpg;fixtures/receiving/UNIT-0014_carton.jpg;fixtures/receiving/UNIT-0014_unit.jpg]\n  - PREP_MANAGER (PRP-0014, 2026-06-06T07:36:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0014_front.jpg;fixtures/prep/UNIT-0014_back.jpg;fixtures/prep/UNIT-0014_label.jpg]\n  - RETURNS_MANAGER (RTN-0014, 2026-07-18T07:36:00Z): Observed state: signs_of_use, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0014_1.jpg;fixtures/returns/UNIT-0014_2.jpg;fixtures/returns/UNIT-0014_3.jpg]\n\nAction Requested:\nReimburse $15.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "Customer Returns and Seller Reimbursements (45-Day Rule)",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200379860",
+        "rule_key": "CUSTOMER_RETURN_45_DAY_POLICY"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0014",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0014_pallet.jpg;fixtures/receiving/UNIT-0014_carton.jpg;fixtures/receiving/UNIT-0014_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-04T14:36:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0014",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0014_front.jpg;fixtures/prep/UNIT-0014_back.jpg;fixtures/prep/UNIT-0014_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-06T07:36:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0014",
+          "observed_findings": "Observed state: signs_of_use, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0014_1.jpg;fixtures/returns/UNIT-0014_2.jpg;fixtures/returns/UNIT-0014_3.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-07-18T07:36:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0025-1",
+      "unit_id": "UNIT-0025",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-TOWEL-BLU",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0025-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0025\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0025 (SKU: SKU-TOWEL-BLU) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0025, 2026-06-10T00:17:00Z): Intake qty=18, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0025_pallet.jpg;fixtures/receiving/UNIT-0025_carton.jpg;fixtures/receiving/UNIT-0025_unit.jpg]\n  - PREP_MANAGER (PRP-0025, 2026-06-10T13:17:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0025_front.jpg;fixtures/prep/UNIT-0025_back.jpg;fixtures/prep/UNIT-0025_label.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0025",
+          "observed_findings": "Intake qty=18, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0025_pallet.jpg;fixtures/receiving/UNIT-0025_carton.jpg;fixtures/receiving/UNIT-0025_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-10T00:17:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0025",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0025_front.jpg;fixtures/prep/UNIT-0025_back.jpg;fixtures/prep/UNIT-0025_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-10T13:17:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0026-1",
+      "unit_id": "UNIT-0026",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 1.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0026-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: inbound_defect_fee ($1.00) for Unit UNIT-0026\nGoverning Policy: FBA Inbound Defect & Performance Fee Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/G201850100)\n\nCase Summary:\nThe fee of $1.00 assessed against unit UNIT-0026 (SKU: SKU-BOTTLE-750) is contradicted by verified warehouse operational evidence. Under FBA Inbound Defect & Performance Fee Dispute Policy, we request a reimbursement credit of $1.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0026, 2026-06-06T08:15:00Z): Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0026_pallet.jpg;fixtures/receiving/UNIT-0026_carton.jpg;fixtures/receiving/UNIT-0026_unit.jpg]\n  - PREP_MANAGER (PRP-0026, 2026-06-07T18:15:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0026_front.jpg;fixtures/prep/UNIT-0026_back.jpg;fixtures/prep/UNIT-0026_label.jpg]\n\nAction Requested:\nReimburse $1.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0026",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0026_pallet.jpg;fixtures/receiving/UNIT-0026_carton.jpg;fixtures/receiving/UNIT-0026_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-06T08:15:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0026",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0026_front.jpg;fixtures/prep/UNIT-0026_back.jpg;fixtures/prep/UNIT-0026_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-07T18:15:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0031-1",
+      "unit_id": "UNIT-0031",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "lost_inbound",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 25.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0031-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: lost_inbound ($0.00) for Unit UNIT-0031\nGoverning Policy: FBA Lost and Damaged Inventory Reimbursement Policy (https://sellercentral.amazon.com/help/hub/reference/G200213130)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0031 (SKU: SKU-CABLE-USBC) is contradicted by verified warehouse operational evidence. Under FBA Lost and Damaged Inventory Reimbursement Policy, we request a reimbursement credit of $25.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0031, 2026-06-11T08:16:00Z): Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0031_pallet.jpg;fixtures/receiving/UNIT-0031_carton.jpg;fixtures/receiving/UNIT-0031_unit.jpg]\n  - PREP_MANAGER (PRP-0031, 2026-06-12T16:16:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0031_front.jpg;fixtures/prep/UNIT-0031_back.jpg;fixtures/prep/UNIT-0031_label.jpg]\n\nAction Requested:\nReimburse $25.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Lost and Damaged Inventory Reimbursement Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200213130",
+        "rule_key": "LOST_INBOUND_INVENTORY_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0031",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0031_pallet.jpg;fixtures/receiving/UNIT-0031_carton.jpg;fixtures/receiving/UNIT-0031_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-11T08:16:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0031",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0031_front.jpg;fixtures/prep/UNIT-0031_back.jpg;fixtures/prep/UNIT-0031_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-12T16:16:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0031-2",
+      "unit_id": "UNIT-0031",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0031-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0031\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0031 (SKU: SKU-CABLE-USBC) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0031, 2026-06-11T08:16:00Z): Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0031_pallet.jpg;fixtures/receiving/UNIT-0031_carton.jpg;fixtures/receiving/UNIT-0031_unit.jpg]\n  - PREP_MANAGER (PRP-0031, 2026-06-12T16:16:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0031_front.jpg;fixtures/prep/UNIT-0031_back.jpg;fixtures/prep/UNIT-0031_label.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0031",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0031_pallet.jpg;fixtures/receiving/UNIT-0031_carton.jpg;fixtures/receiving/UNIT-0031_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-11T08:16:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0031",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0031_front.jpg;fixtures/prep/UNIT-0031_back.jpg;fixtures/prep/UNIT-0031_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-12T16:16:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0035-1",
+      "unit_id": "UNIT-0035",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 0.5,
+      "verdict": "UNCERTAIN",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.5,
+      "dispute_grounds": "Prep records contain uncertain or ambiguous inspection states.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0035",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0035_pallet.jpg;fixtures/receiving/UNIT-0035_carton.jpg;fixtures/receiving/UNIT-0035_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-02T09:41:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0035",
+          "observed_findings": "FNSKU=flat, barcode_covered=uncertain, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0035_front.jpg;fixtures/prep/UNIT-0035_back.jpg;fixtures/prep/UNIT-0035_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-03T16:41:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Human review required: Operator flagged inspection certainty as 'uncertain'.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0035-2",
+      "unit_id": "UNIT-0035",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0035",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0035_pallet.jpg;fixtures/receiving/UNIT-0035_carton.jpg;fixtures/receiving/UNIT-0035_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-02T09:41:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0035",
+          "observed_findings": "FNSKU=flat, barcode_covered=uncertain, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0035_front.jpg;fixtures/prep/UNIT-0035_back.jpg;fixtures/prep/UNIT-0035_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-03T16:41:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0038-1",
+      "unit_id": "UNIT-0038",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-PROT-1KG",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0038-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0038\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0038 (SKU: SKU-PROT-1KG) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0038, 2026-06-07T13:20:00Z): Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0038_pallet.jpg;fixtures/receiving/UNIT-0038_carton.jpg;fixtures/receiving/UNIT-0038_unit.jpg]\n  - PREP_MANAGER (PRP-0038, 2026-06-08T11:20:00Z): FNSKU=uncertain, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0038_front.jpg;fixtures/prep/UNIT-0038_back.jpg;fixtures/prep/UNIT-0038_label.jpg]\n  - RETURNS_MANAGER (RTN-0038, 2026-07-19T11:20:00Z): Observed state: opened_unused, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0038_1.jpg;fixtures/returns/UNIT-0038_2.jpg;fixtures/returns/UNIT-0038_3.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0038",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0038_pallet.jpg;fixtures/receiving/UNIT-0038_carton.jpg;fixtures/receiving/UNIT-0038_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-07T13:20:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0038",
+          "observed_findings": "FNSKU=uncertain, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0038_front.jpg;fixtures/prep/UNIT-0038_back.jpg;fixtures/prep/UNIT-0038_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-08T11:20:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0038",
+          "observed_findings": "Observed state: opened_unused, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0038_1.jpg;fixtures/returns/UNIT-0038_2.jpg;fixtures/returns/UNIT-0038_3.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-07-19T11:20:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0038-2",
+      "unit_id": "UNIT-0038",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-PROT-1KG",
+      "charge_type": "refund_issued_item_not_returned",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 15.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0038-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: refund_issued_item_not_returned ($0.00) for Unit UNIT-0038\nGoverning Policy: Customer Returns and Seller Reimbursements (45-Day Rule) (https://sellercentral.amazon.com/help/hub/reference/G200379860)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0038 (SKU: SKU-PROT-1KG) is contradicted by verified warehouse operational evidence. Under Customer Returns and Seller Reimbursements (45-Day Rule), we request a reimbursement credit of $15.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0038, 2026-06-07T13:20:00Z): Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0038_pallet.jpg;fixtures/receiving/UNIT-0038_carton.jpg;fixtures/receiving/UNIT-0038_unit.jpg]\n  - PREP_MANAGER (PRP-0038, 2026-06-08T11:20:00Z): FNSKU=uncertain, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0038_front.jpg;fixtures/prep/UNIT-0038_back.jpg;fixtures/prep/UNIT-0038_label.jpg]\n  - RETURNS_MANAGER (RTN-0038, 2026-07-19T11:20:00Z): Observed state: opened_unused, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0038_1.jpg;fixtures/returns/UNIT-0038_2.jpg;fixtures/returns/UNIT-0038_3.jpg]\n\nAction Requested:\nReimburse $15.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "Customer Returns and Seller Reimbursements (45-Day Rule)",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200379860",
+        "rule_key": "CUSTOMER_RETURN_45_DAY_POLICY"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0038",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0038_pallet.jpg;fixtures/receiving/UNIT-0038_carton.jpg;fixtures/receiving/UNIT-0038_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-07T13:20:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0038",
+          "observed_findings": "FNSKU=uncertain, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0038_front.jpg;fixtures/prep/UNIT-0038_back.jpg;fixtures/prep/UNIT-0038_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-08T11:20:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0038",
+          "observed_findings": "Observed state: opened_unused, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0038_1.jpg;fixtures/returns/UNIT-0038_2.jpg;fixtures/returns/UNIT-0038_3.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-07-19T11:20:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0041-1",
+      "unit_id": "UNIT-0041",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LEASH-6FT",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0041",
+          "observed_findings": "Intake qty=6, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0041_pallet.jpg;fixtures/receiving/UNIT-0041_carton.jpg;fixtures/receiving/UNIT-0041_unit.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-06T06:35:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0041",
+          "observed_findings": "FNSKU=flat, barcode_covered=uncertain, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0041_front.jpg;fixtures/prep/UNIT-0041_back.jpg;fixtures/prep/UNIT-0041_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-07T09:35:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0041",
+          "observed_findings": "Observed state: damaged, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0041_1.jpg;fixtures/returns/UNIT-0041_2.jpg;fixtures/returns/UNIT-0041_3.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-07-08T09:35:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0041-2",
+      "unit_id": "UNIT-0041",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LEASH-6FT",
+      "charge_type": "refund_issued_item_not_returned",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 15.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0041-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: refund_issued_item_not_returned ($0.00) for Unit UNIT-0041\nGoverning Policy: Customer Returns and Seller Reimbursements (45-Day Rule) (https://sellercentral.amazon.com/help/hub/reference/G200379860)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0041 (SKU: SKU-LEASH-6FT) is contradicted by verified warehouse operational evidence. Under Customer Returns and Seller Reimbursements (45-Day Rule), we request a reimbursement credit of $15.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0041, 2026-06-06T06:35:00Z): Intake qty=6, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0041_pallet.jpg;fixtures/receiving/UNIT-0041_carton.jpg;fixtures/receiving/UNIT-0041_unit.jpg]\n  - PREP_MANAGER (PRP-0041, 2026-06-07T09:35:00Z): FNSKU=flat, barcode_covered=uncertain, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0041_front.jpg;fixtures/prep/UNIT-0041_back.jpg;fixtures/prep/UNIT-0041_label.jpg]\n  - RETURNS_MANAGER (RTN-0041, 2026-07-08T09:35:00Z): Observed state: damaged, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0041_1.jpg;fixtures/returns/UNIT-0041_2.jpg;fixtures/returns/UNIT-0041_3.jpg]\n\nAction Requested:\nReimburse $15.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "Customer Returns and Seller Reimbursements (45-Day Rule)",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200379860",
+        "rule_key": "CUSTOMER_RETURN_45_DAY_POLICY"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0041",
+          "observed_findings": "Intake qty=6, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0041_pallet.jpg;fixtures/receiving/UNIT-0041_carton.jpg;fixtures/receiving/UNIT-0041_unit.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-06T06:35:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0041",
+          "observed_findings": "FNSKU=flat, barcode_covered=uncertain, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0041_front.jpg;fixtures/prep/UNIT-0041_back.jpg;fixtures/prep/UNIT-0041_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-07T09:35:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0041",
+          "observed_findings": "Observed state: damaged, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0041_1.jpg;fixtures/returns/UNIT-0041_2.jpg;fixtures/returns/UNIT-0041_3.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-07-08T09:35:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0050-1",
+      "unit_id": "UNIT-0050",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-PUZZLE-500",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0050",
+          "observed_findings": "Intake qty=96, carton_dmg=tears, unit_dmg=crushing, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0050_pallet.jpg;fixtures/receiving/UNIT-0050_carton.jpg;fixtures/receiving/UNIT-0050_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-10T15:07:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0050",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=uncertain",
+          "photo_refs": "fixtures/prep/UNIT-0050_front.jpg;fixtures/prep/UNIT-0050_back.jpg;fixtures/prep/UNIT-0050_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-10T22:07:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0050",
+          "observed_findings": "Observed state: signs_of_use, disposition: refurbish, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0050_1.jpg;fixtures/returns/UNIT-0050_2.jpg;fixtures/returns/UNIT-0050_3.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-07-13T22:07:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0052-1",
+      "unit_id": "UNIT-0052",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-TOWEL-BLU",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0052-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0052\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0052 (SKU: SKU-TOWEL-BLU) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0052, 2026-06-07T02:33:00Z): Intake qty=24, carton_dmg=tears, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0052_pallet.jpg;fixtures/receiving/UNIT-0052_carton.jpg;fixtures/receiving/UNIT-0052_unit.jpg]\n  - PREP_MANAGER (PRP-0052, 2026-06-08T06:33:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0052_front.jpg;fixtures/prep/UNIT-0052_back.jpg;fixtures/prep/UNIT-0052_label.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0052",
+          "observed_findings": "Intake qty=24, carton_dmg=tears, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0052_pallet.jpg;fixtures/receiving/UNIT-0052_carton.jpg;fixtures/receiving/UNIT-0052_unit.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-07T02:33:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0052",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0052_front.jpg;fixtures/prep/UNIT-0052_back.jpg;fixtures/prep/UNIT-0052_label.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-08T06:33:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0061-1",
+      "unit_id": "UNIT-0061",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-PROT-1KG",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 2.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 2.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0061-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: inbound_defect_fee ($2.00) for Unit UNIT-0061\nGoverning Policy: FBA Inbound Defect & Performance Fee Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/G201850100)\n\nCase Summary:\nThe fee of $2.00 assessed against unit UNIT-0061 (SKU: SKU-PROT-1KG) is contradicted by verified warehouse operational evidence. Under FBA Inbound Defect & Performance Fee Dispute Policy, we request a reimbursement credit of $2.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0061, 2026-06-09T14:28:00Z): Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0061_pallet.jpg;fixtures/receiving/UNIT-0061_carton.jpg;fixtures/receiving/UNIT-0061_unit.jpg]\n  - PREP_MANAGER (PRP-0061, 2026-06-10T07:28:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0061_front.jpg;fixtures/prep/UNIT-0061_back.jpg;fixtures/prep/UNIT-0061_label.jpg]\n\nAction Requested:\nReimburse $2.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0061",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0061_pallet.jpg;fixtures/receiving/UNIT-0061_carton.jpg;fixtures/receiving/UNIT-0061_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-09T14:28:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0061",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0061_front.jpg;fixtures/prep/UNIT-0061_back.jpg;fixtures/prep/UNIT-0061_label.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-10T07:28:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0061-2",
+      "unit_id": "UNIT-0061",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-PROT-1KG",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0061",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0061_pallet.jpg;fixtures/receiving/UNIT-0061_carton.jpg;fixtures/receiving/UNIT-0061_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-09T14:28:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0061",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0061_front.jpg;fixtures/prep/UNIT-0061_back.jpg;fixtures/prep/UNIT-0061_label.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-10T07:28:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0064-1",
+      "unit_id": "UNIT-0064",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "lost_inbound",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 25.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0064-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: lost_inbound ($0.00) for Unit UNIT-0064\nGoverning Policy: FBA Lost and Damaged Inventory Reimbursement Policy (https://sellercentral.amazon.com/help/hub/reference/G200213130)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0064 (SKU: SKU-BOTTLE-750) is contradicted by verified warehouse operational evidence. Under FBA Lost and Damaged Inventory Reimbursement Policy, we request a reimbursement credit of $25.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0064, 2026-06-08T22:33:00Z): Intake qty=44, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0064_pallet.jpg;fixtures/receiving/UNIT-0064_carton.jpg;fixtures/receiving/UNIT-0064_unit.jpg]\n  - PREP_MANAGER (PRP-0064, 2026-06-09T14:33:00Z): FNSKU=flat, barcode_covered=no, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0064_front.jpg;fixtures/prep/UNIT-0064_back.jpg;fixtures/prep/UNIT-0064_label.jpg]\n  - RETURNS_MANAGER (RTN-0064, 2026-06-29T14:33:00Z): Observed state: factory_sealed, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0064_1.jpg;fixtures/returns/UNIT-0064_2.jpg;fixtures/returns/UNIT-0064_3.jpg]\n\nAction Requested:\nReimburse $25.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Lost and Damaged Inventory Reimbursement Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200213130",
+        "rule_key": "LOST_INBOUND_INVENTORY_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0064",
+          "observed_findings": "Intake qty=44, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0064_pallet.jpg;fixtures/receiving/UNIT-0064_carton.jpg;fixtures/receiving/UNIT-0064_unit.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-08T22:33:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0064",
+          "observed_findings": "FNSKU=flat, barcode_covered=no, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0064_front.jpg;fixtures/prep/UNIT-0064_back.jpg;fixtures/prep/UNIT-0064_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-09T14:33:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0064",
+          "observed_findings": "Observed state: factory_sealed, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0064_1.jpg;fixtures/returns/UNIT-0064_2.jpg;fixtures/returns/UNIT-0064_3.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-29T14:33:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0064-2",
+      "unit_id": "UNIT-0064",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0064-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0064\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0064 (SKU: SKU-BOTTLE-750) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0064, 2026-06-08T22:33:00Z): Intake qty=44, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0064_pallet.jpg;fixtures/receiving/UNIT-0064_carton.jpg;fixtures/receiving/UNIT-0064_unit.jpg]\n  - PREP_MANAGER (PRP-0064, 2026-06-09T14:33:00Z): FNSKU=flat, barcode_covered=no, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0064_front.jpg;fixtures/prep/UNIT-0064_back.jpg;fixtures/prep/UNIT-0064_label.jpg]\n  - RETURNS_MANAGER (RTN-0064, 2026-06-29T14:33:00Z): Observed state: factory_sealed, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0064_1.jpg;fixtures/returns/UNIT-0064_2.jpg;fixtures/returns/UNIT-0064_3.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0064",
+          "observed_findings": "Intake qty=44, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0064_pallet.jpg;fixtures/receiving/UNIT-0064_carton.jpg;fixtures/receiving/UNIT-0064_unit.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-08T22:33:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0064",
+          "observed_findings": "FNSKU=flat, barcode_covered=no, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0064_front.jpg;fixtures/prep/UNIT-0064_back.jpg;fixtures/prep/UNIT-0064_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-09T14:33:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0064",
+          "observed_findings": "Observed state: factory_sealed, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0064_1.jpg;fixtures/returns/UNIT-0064_2.jpg;fixtures/returns/UNIT-0064_3.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-29T14:33:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0065-1",
+      "unit_id": "UNIT-0065",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LAMP-LED",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0065",
+          "observed_findings": "Intake qty=6, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0065_pallet.jpg;fixtures/receiving/UNIT-0065_carton.jpg;fixtures/receiving/UNIT-0065_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-08T01:40:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0065",
+          "observed_findings": "FNSKU=flat, barcode_covered=no, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0065_front.jpg;fixtures/prep/UNIT-0065_back.jpg;fixtures/prep/UNIT-0065_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-09T16:40:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0071-1",
+      "unit_id": "UNIT-0071",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 1.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0071-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: inbound_defect_fee ($1.00) for Unit UNIT-0071\nGoverning Policy: FBA Inbound Defect & Performance Fee Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/G201850100)\n\nCase Summary:\nThe fee of $1.00 assessed against unit UNIT-0071 (SKU: SKU-CABLE-USBC) is contradicted by verified warehouse operational evidence. Under FBA Inbound Defect & Performance Fee Dispute Policy, we request a reimbursement credit of $1.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0071, 2026-06-06T13:03:00Z): Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0071_pallet.jpg;fixtures/receiving/UNIT-0071_carton.jpg;fixtures/receiving/UNIT-0071_unit.jpg]\n  - PREP_MANAGER (PRP-0071, 2026-06-07T05:03:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0071_front.jpg;fixtures/prep/UNIT-0071_back.jpg;fixtures/prep/UNIT-0071_label.jpg]\n\nAction Requested:\nReimburse $1.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0071",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0071_pallet.jpg;fixtures/receiving/UNIT-0071_carton.jpg;fixtures/receiving/UNIT-0071_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-06T13:03:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0071",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0071_front.jpg;fixtures/prep/UNIT-0071_back.jpg;fixtures/prep/UNIT-0071_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-07T05:03:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0071-2",
+      "unit_id": "UNIT-0071",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "damaged_in_warehouse",
+      "assessed_amount_usd": 14.0,
+      "verdict": "ALREADY_REIMBURSED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 1.0,
+      "dispute_grounds": "Reimbursement already credited in channel settlement records.",
+      "cited_policy": {
+        "policy_name": "FBA Reimbursement Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200213130",
+        "rule_key": "REIMBURSEMENT_RECONCILIATION"
+      },
+      "evidence_chain": [],
+      "explanation_if_unsupported": "A matching reimbursement entry was already found in reports. Filing duplicate claim is barred by policy.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0071-3",
+      "unit_id": "UNIT-0071",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0071",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0071_pallet.jpg;fixtures/receiving/UNIT-0071_carton.jpg;fixtures/receiving/UNIT-0071_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-06T13:03:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0071",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0071_front.jpg;fixtures/prep/UNIT-0071_back.jpg;fixtures/prep/UNIT-0071_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-07T05:03:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0073-1",
+      "unit_id": "UNIT-0073",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LEASH-6FT",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0073",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0073_pallet.jpg;fixtures/receiving/UNIT-0073_carton.jpg;fixtures/receiving/UNIT-0073_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-05T15:25:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0073",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0073_front.jpg;fixtures/prep/UNIT-0073_back.jpg;fixtures/prep/UNIT-0073_label.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-07T02:25:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0074-1",
+      "unit_id": "UNIT-0074",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 0.5,
+      "verdict": "UNCERTAIN",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.5,
+      "dispute_grounds": "Receiving intake logs mark condition as uncertain.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0074",
+          "observed_findings": "Intake qty=24, carton_dmg=crushing, unit_dmg=uncertain, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0074_pallet.jpg;fixtures/receiving/UNIT-0074_carton.jpg;fixtures/receiving/UNIT-0074_unit.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-10T04:13:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0074",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0074_front.jpg;fixtures/prep/UNIT-0074_back.jpg;fixtures/prep/UNIT-0074_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-11T02:13:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Human review required: Receiving inspector logged damage state as 'uncertain'.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0074-2",
+      "unit_id": "UNIT-0074",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0074",
+          "observed_findings": "Intake qty=24, carton_dmg=crushing, unit_dmg=uncertain, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0074_pallet.jpg;fixtures/receiving/UNIT-0074_carton.jpg;fixtures/receiving/UNIT-0074_unit.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-10T04:13:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0074",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0074_front.jpg;fixtures/prep/UNIT-0074_back.jpg;fixtures/prep/UNIT-0074_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-11T02:13:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0076-1",
+      "unit_id": "UNIT-0076",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LAMP-LED",
+      "charge_type": "lost_inbound",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 25.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0076-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: lost_inbound ($0.00) for Unit UNIT-0076\nGoverning Policy: FBA Lost and Damaged Inventory Reimbursement Policy (https://sellercentral.amazon.com/help/hub/reference/G200213130)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0076 (SKU: SKU-LAMP-LED) is contradicted by verified warehouse operational evidence. Under FBA Lost and Damaged Inventory Reimbursement Policy, we request a reimbursement credit of $25.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0076, 2026-06-04T14:27:00Z): Intake qty=12, carton_dmg=none, unit_dmg=none, flags=obvious_defect [Photos: fixtures/receiving/UNIT-0076_pallet.jpg;fixtures/receiving/UNIT-0076_carton.jpg;fixtures/receiving/UNIT-0076_unit.jpg]\n  - PREP_MANAGER (PRP-0076, 2026-06-05T14:27:00Z): FNSKU=uncertain, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0076_front.jpg;fixtures/prep/UNIT-0076_back.jpg;fixtures/prep/UNIT-0076_label.jpg]\n\nAction Requested:\nReimburse $25.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Lost and Damaged Inventory Reimbursement Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200213130",
+        "rule_key": "LOST_INBOUND_INVENTORY_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0076",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=obvious_defect",
+          "photo_refs": "fixtures/receiving/UNIT-0076_pallet.jpg;fixtures/receiving/UNIT-0076_carton.jpg;fixtures/receiving/UNIT-0076_unit.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-04T14:27:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0076",
+          "observed_findings": "FNSKU=uncertain, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0076_front.jpg;fixtures/prep/UNIT-0076_back.jpg;fixtures/prep/UNIT-0076_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-05T14:27:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0076-2",
+      "unit_id": "UNIT-0076",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LAMP-LED",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0076-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0076\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0076 (SKU: SKU-LAMP-LED) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0076, 2026-06-04T14:27:00Z): Intake qty=12, carton_dmg=none, unit_dmg=none, flags=obvious_defect [Photos: fixtures/receiving/UNIT-0076_pallet.jpg;fixtures/receiving/UNIT-0076_carton.jpg;fixtures/receiving/UNIT-0076_unit.jpg]\n  - PREP_MANAGER (PRP-0076, 2026-06-05T14:27:00Z): FNSKU=uncertain, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0076_front.jpg;fixtures/prep/UNIT-0076_back.jpg;fixtures/prep/UNIT-0076_label.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0076",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=obvious_defect",
+          "photo_refs": "fixtures/receiving/UNIT-0076_pallet.jpg;fixtures/receiving/UNIT-0076_carton.jpg;fixtures/receiving/UNIT-0076_unit.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-04T14:27:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0076",
+          "observed_findings": "FNSKU=uncertain, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0076_front.jpg;fixtures/prep/UNIT-0076_back.jpg;fixtures/prep/UNIT-0076_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-05T14:27:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0077-1",
+      "unit_id": "UNIT-0077",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-LAMP-LED",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0077-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0077\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0077 (SKU: SKU-LAMP-LED) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0077, 2026-06-09T21:02:00Z): Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0077_pallet.jpg;fixtures/receiving/UNIT-0077_carton.jpg;fixtures/receiving/UNIT-0077_unit.jpg]\n  - PREP_MANAGER (PRP-0077, 2026-06-11T21:02:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0077_front.jpg;fixtures/prep/UNIT-0077_back.jpg;fixtures/prep/UNIT-0077_label.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0077",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0077_pallet.jpg;fixtures/receiving/UNIT-0077_carton.jpg;fixtures/receiving/UNIT-0077_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-09T21:02:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0077",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0077_front.jpg;fixtures/prep/UNIT-0077_back.jpg;fixtures/prep/UNIT-0077_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-11T21:02:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0085-1",
+      "unit_id": "UNIT-0085",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0085-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0085\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0085 (SKU: SKU-CABLE-USBC) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0085, 2026-06-04T19:07:00Z): Intake qty=12, carton_dmg=none, unit_dmg=none, flags=missing_components [Photos: fixtures/receiving/UNIT-0085_pallet.jpg;fixtures/receiving/UNIT-0085_carton.jpg;fixtures/receiving/UNIT-0085_unit.jpg]\n  - PREP_MANAGER (PRP-0085, 2026-06-06T03:07:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0085_front.jpg;fixtures/prep/UNIT-0085_back.jpg;fixtures/prep/UNIT-0085_label.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0085",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=missing_components",
+          "photo_refs": "fixtures/receiving/UNIT-0085_pallet.jpg;fixtures/receiving/UNIT-0085_carton.jpg;fixtures/receiving/UNIT-0085_unit.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-04T19:07:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0085",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0085_front.jpg;fixtures/prep/UNIT-0085_back.jpg;fixtures/prep/UNIT-0085_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-06T03:07:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0092-1",
+      "unit_id": "UNIT-0092",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-SERUM-30",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0092",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0092_pallet.jpg;fixtures/receiving/UNIT-0092_carton.jpg;fixtures/receiving/UNIT-0092_unit.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-10T20:15:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0092",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0092_front.jpg;fixtures/prep/UNIT-0092_back.jpg;fixtures/prep/UNIT-0092_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-11T12:15:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0092",
+          "observed_findings": "Observed state: uncertain, disposition: pending_review, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0092_1.jpg;fixtures/returns/UNIT-0092_2.jpg;fixtures/returns/UNIT-0092_3.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-20T12:15:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0094-1",
+      "unit_id": "UNIT-0094",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-MUG-11",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0094",
+          "observed_findings": "Intake qty=96, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0094_pallet.jpg;fixtures/receiving/UNIT-0094_carton.jpg;fixtures/receiving/UNIT-0094_unit.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-01T20:10:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0094",
+          "observed_findings": "FNSKU=missing, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0094_front.jpg;fixtures/prep/UNIT-0094_back.jpg;fixtures/prep/UNIT-0094_label.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-02T06:10:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0095-1",
+      "unit_id": "UNIT-0095",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CANDLE-3",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 0.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Evidence supports the charge. Defect was verified present in warehouse audit logs.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0095",
+          "observed_findings": "Intake qty=24, carton_dmg=crushing, unit_dmg=water, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0095_pallet.jpg;fixtures/receiving/UNIT-0095_carton.jpg;fixtures/receiving/UNIT-0095_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-03T09:03:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0095",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0095_front.jpg;fixtures/prep/UNIT-0095_back.jpg;fixtures/prep/UNIT-0095_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-04T05:03:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Receiving record logged unit damage: water.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    },
+    {
+      "line_id": "FEE-0095-2",
+      "unit_id": "UNIT-0095",
+      "org_id": "org_demo_alpha",
+      "sku": "SKU-CANDLE-3",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 6.35,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 2.1,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0095-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($6.35) for Unit UNIT-0095\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $6.35 assessed against unit UNIT-0095 (SKU: SKU-CANDLE-3) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $2.10.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0095, 2026-06-03T09:03:00Z): Intake qty=24, carton_dmg=crushing, unit_dmg=water, flags=none [Photos: fixtures/receiving/UNIT-0095_pallet.jpg;fixtures/receiving/UNIT-0095_carton.jpg;fixtures/receiving/UNIT-0095_unit.jpg]\n  - PREP_MANAGER (PRP-0095, 2026-06-04T05:03:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0095_front.jpg;fixtures/prep/UNIT-0095_back.jpg;fixtures/prep/UNIT-0095_label.jpg]\n\nAction Requested:\nReimburse $2.10 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0095",
+          "observed_findings": "Intake qty=24, carton_dmg=crushing, unit_dmg=water, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0095_pallet.jpg;fixtures/receiving/UNIT-0095_carton.jpg;fixtures/receiving/UNIT-0095_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-03T09:03:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0095",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0095_front.jpg;fixtures/prep/UNIT-0095_back.jpg;fixtures/prep/UNIT-0095_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-04T05:03:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.394822Z"
+    }
+  ],
+  "org_demo_bravo": [
+    {
+      "line_id": "FEE-0003-1",
+      "unit_id": "UNIT-0003",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-PUZZLE-500",
+      "charge_type": "lost_inbound",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 25.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0003-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: lost_inbound ($0.00) for Unit UNIT-0003\nGoverning Policy: FBA Lost and Damaged Inventory Reimbursement Policy (https://sellercentral.amazon.com/help/hub/reference/G200213130)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0003 (SKU: SKU-PUZZLE-500) is contradicted by verified warehouse operational evidence. Under FBA Lost and Damaged Inventory Reimbursement Policy, we request a reimbursement credit of $25.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0003, 2026-06-04T02:54:00Z): Intake qty=44, carton_dmg=crushing, unit_dmg=uncertain, flags=none [Photos: fixtures/receiving/UNIT-0003_pallet.jpg;fixtures/receiving/UNIT-0003_carton.jpg;fixtures/receiving/UNIT-0003_unit.jpg]\n  - PREP_MANAGER (PRP-0003, 2026-06-04T15:54:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_sealed, suffocation=legible [Photos: fixtures/prep/UNIT-0003_front.jpg;fixtures/prep/UNIT-0003_back.jpg;fixtures/prep/UNIT-0003_label.jpg]\n  - RETURNS_MANAGER (RTN-0003, 2026-07-10T15:54:00Z): Observed state: signs_of_use, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0003_1.jpg;fixtures/returns/UNIT-0003_2.jpg;fixtures/returns/UNIT-0003_3.jpg]\n\nAction Requested:\nReimburse $25.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Lost and Damaged Inventory Reimbursement Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200213130",
+        "rule_key": "LOST_INBOUND_INVENTORY_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0003",
+          "observed_findings": "Intake qty=44, carton_dmg=crushing, unit_dmg=uncertain, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0003_pallet.jpg;fixtures/receiving/UNIT-0003_carton.jpg;fixtures/receiving/UNIT-0003_unit.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-04T02:54:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0003",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_sealed, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0003_front.jpg;fixtures/prep/UNIT-0003_back.jpg;fixtures/prep/UNIT-0003_label.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-04T15:54:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0003",
+          "observed_findings": "Observed state: signs_of_use, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0003_1.jpg;fixtures/returns/UNIT-0003_2.jpg;fixtures/returns/UNIT-0003_3.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-07-10T15:54:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.400822Z"
+    },
+    {
+      "line_id": "FEE-0003-2",
+      "unit_id": "UNIT-0003",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-PUZZLE-500",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0003-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0003\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0003 (SKU: SKU-PUZZLE-500) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0003, 2026-06-04T02:54:00Z): Intake qty=44, carton_dmg=crushing, unit_dmg=uncertain, flags=none [Photos: fixtures/receiving/UNIT-0003_pallet.jpg;fixtures/receiving/UNIT-0003_carton.jpg;fixtures/receiving/UNIT-0003_unit.jpg]\n  - PREP_MANAGER (PRP-0003, 2026-06-04T15:54:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_sealed, suffocation=legible [Photos: fixtures/prep/UNIT-0003_front.jpg;fixtures/prep/UNIT-0003_back.jpg;fixtures/prep/UNIT-0003_label.jpg]\n  - RETURNS_MANAGER (RTN-0003, 2026-07-10T15:54:00Z): Observed state: signs_of_use, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0003_1.jpg;fixtures/returns/UNIT-0003_2.jpg;fixtures/returns/UNIT-0003_3.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0003",
+          "observed_findings": "Intake qty=44, carton_dmg=crushing, unit_dmg=uncertain, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0003_pallet.jpg;fixtures/receiving/UNIT-0003_carton.jpg;fixtures/receiving/UNIT-0003_unit.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-04T02:54:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0003",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_sealed, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0003_front.jpg;fixtures/prep/UNIT-0003_back.jpg;fixtures/prep/UNIT-0003_label.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-04T15:54:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0003",
+          "observed_findings": "Observed state: signs_of_use, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0003_1.jpg;fixtures/returns/UNIT-0003_2.jpg;fixtures/returns/UNIT-0003_3.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-07-10T15:54:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.400822Z"
+    },
+    {
+      "line_id": "FEE-0012-1",
+      "unit_id": "UNIT-0012",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-MUG-11",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0012-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0012\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0012 (SKU: SKU-MUG-11) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0012, 2026-06-04T06:34:00Z): Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0012_pallet.jpg;fixtures/receiving/UNIT-0012_carton.jpg;fixtures/receiving/UNIT-0012_unit.jpg]\n  - PREP_MANAGER (PRP-0012, 2026-06-05T06:34:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0012_front.jpg;fixtures/prep/UNIT-0012_back.jpg;fixtures/prep/UNIT-0012_label.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0012",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0012_pallet.jpg;fixtures/receiving/UNIT-0012_carton.jpg;fixtures/receiving/UNIT-0012_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-04T06:34:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0012",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0012_front.jpg;fixtures/prep/UNIT-0012_back.jpg;fixtures/prep/UNIT-0012_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-05T06:34:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.400822Z"
+    },
+    {
+      "line_id": "FEE-0015-1",
+      "unit_id": "UNIT-0015",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-MUG-11",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0015",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0015_pallet.jpg;fixtures/receiving/UNIT-0015_carton.jpg;fixtures/receiving/UNIT-0015_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-10T07:23:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0015",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0015_front.jpg;fixtures/prep/UNIT-0015_back.jpg;fixtures/prep/UNIT-0015_label.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-12T02:23:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.400822Z"
+    },
+    {
+      "line_id": "FEE-0018-1",
+      "unit_id": "UNIT-0018",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 1.0,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Evidence supports the charge. Defect was verified present in warehouse audit logs.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0018",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=obvious_defect",
+          "photo_refs": "fixtures/receiving/UNIT-0018_pallet.jpg;fixtures/receiving/UNIT-0018_carton.jpg;fixtures/receiving/UNIT-0018_unit.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-07T07:44:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0018",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0018_front.jpg;fixtures/prep/UNIT-0018_back.jpg;fixtures/prep/UNIT-0018_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-08T04:44:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0018",
+          "observed_findings": "Observed state: factory_sealed, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0018_1.jpg;fixtures/returns/UNIT-0018_2.jpg;fixtures/returns/UNIT-0018_3.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-07-18T04:44:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Receiving record logged obvious defect during initial dock intake.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0018-2",
+      "unit_id": "UNIT-0018",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0018-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0018\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0018 (SKU: SKU-BOTTLE-750) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0018, 2026-06-07T07:44:00Z): Intake qty=48, carton_dmg=none, unit_dmg=none, flags=obvious_defect [Photos: fixtures/receiving/UNIT-0018_pallet.jpg;fixtures/receiving/UNIT-0018_carton.jpg;fixtures/receiving/UNIT-0018_unit.jpg]\n  - PREP_MANAGER (PRP-0018, 2026-06-08T04:44:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0018_front.jpg;fixtures/prep/UNIT-0018_back.jpg;fixtures/prep/UNIT-0018_label.jpg]\n  - RETURNS_MANAGER (RTN-0018, 2026-07-18T04:44:00Z): Observed state: factory_sealed, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0018_1.jpg;fixtures/returns/UNIT-0018_2.jpg;fixtures/returns/UNIT-0018_3.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0018",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=obvious_defect",
+          "photo_refs": "fixtures/receiving/UNIT-0018_pallet.jpg;fixtures/receiving/UNIT-0018_carton.jpg;fixtures/receiving/UNIT-0018_unit.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-07T07:44:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0018",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0018_front.jpg;fixtures/prep/UNIT-0018_back.jpg;fixtures/prep/UNIT-0018_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-08T04:44:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0018",
+          "observed_findings": "Observed state: factory_sealed, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0018_1.jpg;fixtures/returns/UNIT-0018_2.jpg;fixtures/returns/UNIT-0018_3.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-07-18T04:44:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0024-1",
+      "unit_id": "UNIT-0024",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0024-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0024\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0024 (SKU: SKU-BOTTLE-750) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0024, 2026-06-04T09:47:00Z): Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0024_pallet.jpg;fixtures/receiving/UNIT-0024_carton.jpg;fixtures/receiving/UNIT-0024_unit.jpg]\n  - PREP_MANAGER (PRP-0024, 2026-06-06T05:47:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0024_front.jpg;fixtures/prep/UNIT-0024_back.jpg;fixtures/prep/UNIT-0024_label.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0024",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0024_pallet.jpg;fixtures/receiving/UNIT-0024_carton.jpg;fixtures/receiving/UNIT-0024_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-04T09:47:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0024",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0024_front.jpg;fixtures/prep/UNIT-0024_back.jpg;fixtures/prep/UNIT-0024_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-06T05:47:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0030-1",
+      "unit_id": "UNIT-0030",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-SERUM-30",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0030",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0030_pallet.jpg;fixtures/receiving/UNIT-0030_carton.jpg;fixtures/receiving/UNIT-0030_unit.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-06T14:35:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0030",
+          "observed_findings": "FNSKU=missing, barcode_covered=yes, polybag=yes, suffocation=obscured_by_fold",
+          "photo_refs": "fixtures/prep/UNIT-0030_front.jpg;fixtures/prep/UNIT-0030_back.jpg;fixtures/prep/UNIT-0030_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-07T10:35:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0030",
+          "observed_findings": "Observed state: opened_unused, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0030_1.jpg;fixtures/returns/UNIT-0030_2.jpg;fixtures/returns/UNIT-0030_3.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-07-01T10:35:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0036-1",
+      "unit_id": "UNIT-0036",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-PUZZLE-500",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0036-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0036\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0036 (SKU: SKU-PUZZLE-500) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0036, 2026-06-06T22:15:00Z): Intake qty=11, carton_dmg=crushing, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0036_pallet.jpg;fixtures/receiving/UNIT-0036_carton.jpg;fixtures/receiving/UNIT-0036_unit.jpg]\n  - PREP_MANAGER (PRP-0036, 2026-06-08T04:15:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0036_front.jpg;fixtures/prep/UNIT-0036_back.jpg;fixtures/prep/UNIT-0036_label.jpg]\n  - RETURNS_MANAGER (RTN-0036, 2026-07-14T04:15:00Z): Observed state: opened_unused, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0036_1.jpg;fixtures/returns/UNIT-0036_2.jpg;fixtures/returns/UNIT-0036_3.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0036",
+          "observed_findings": "Intake qty=11, carton_dmg=crushing, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0036_pallet.jpg;fixtures/receiving/UNIT-0036_carton.jpg;fixtures/receiving/UNIT-0036_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-06T22:15:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0036",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0036_front.jpg;fixtures/prep/UNIT-0036_back.jpg;fixtures/prep/UNIT-0036_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-08T04:15:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0036",
+          "observed_findings": "Observed state: opened_unused, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0036_1.jpg;fixtures/returns/UNIT-0036_2.jpg;fixtures/returns/UNIT-0036_3.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-07-14T04:15:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0039-1",
+      "unit_id": "UNIT-0039",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-SERUM-30",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0039-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0039\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0039 (SKU: SKU-SERUM-30) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0039, 2026-06-02T11:55:00Z): Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0039_pallet.jpg;fixtures/receiving/UNIT-0039_carton.jpg;fixtures/receiving/UNIT-0039_unit.jpg]\n  - PREP_MANAGER (PRP-0039, 2026-06-02T16:55:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0039_front.jpg;fixtures/prep/UNIT-0039_back.jpg;fixtures/prep/UNIT-0039_label.jpg]\n  - RETURNS_MANAGER (RTN-0039, 2026-07-08T16:55:00Z): Observed state: damaged, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0039_1.jpg;fixtures/returns/UNIT-0039_2.jpg;fixtures/returns/UNIT-0039_3.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0039",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0039_pallet.jpg;fixtures/receiving/UNIT-0039_carton.jpg;fixtures/receiving/UNIT-0039_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-02T11:55:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0039",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0039_front.jpg;fixtures/prep/UNIT-0039_back.jpg;fixtures/prep/UNIT-0039_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-02T16:55:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0039",
+          "observed_findings": "Observed state: damaged, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0039_1.jpg;fixtures/returns/UNIT-0039_2.jpg;fixtures/returns/UNIT-0039_3.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-07-08T16:55:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0042-1",
+      "unit_id": "UNIT-0042",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0042-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0042\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0042 (SKU: SKU-CABLE-USBC) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0042, 2026-06-02T02:30:00Z): Intake qty=12, carton_dmg=water, unit_dmg=uncertain, flags=none [Photos: fixtures/receiving/UNIT-0042_pallet.jpg;fixtures/receiving/UNIT-0042_carton.jpg;fixtures/receiving/UNIT-0042_unit.jpg]\n  - PREP_MANAGER (PRP-0042, 2026-06-02T06:30:00Z): FNSKU=flat, barcode_covered=yes, polybag=uncertain, suffocation=legible [Photos: fixtures/prep/UNIT-0042_front.jpg;fixtures/prep/UNIT-0042_back.jpg;fixtures/prep/UNIT-0042_label.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0042",
+          "observed_findings": "Intake qty=12, carton_dmg=water, unit_dmg=uncertain, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0042_pallet.jpg;fixtures/receiving/UNIT-0042_carton.jpg;fixtures/receiving/UNIT-0042_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-02T02:30:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0042",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=uncertain, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0042_front.jpg;fixtures/prep/UNIT-0042_back.jpg;fixtures/prep/UNIT-0042_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-02T06:30:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0048-1",
+      "unit_id": "UNIT-0048",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-CANDLE-3",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.85,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0048-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0048\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0048 (SKU: SKU-CANDLE-3) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.85.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0048, 2026-06-06T03:02:00Z): Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0048_pallet.jpg;fixtures/receiving/UNIT-0048_carton.jpg;fixtures/receiving/UNIT-0048_unit.jpg]\n  - PREP_MANAGER (PRP-0048, 2026-06-07T08:02:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0048_front.jpg;fixtures/prep/UNIT-0048_back.jpg;fixtures/prep/UNIT-0048_label.jpg]\n  - RETURNS_MANAGER (RTN-0048, 2026-06-24T08:02:00Z): Observed state: factory_sealed, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0048_1.jpg;fixtures/returns/UNIT-0048_2.jpg;fixtures/returns/UNIT-0048_3.jpg]\n\nAction Requested:\nReimburse $0.85 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0048",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0048_pallet.jpg;fixtures/receiving/UNIT-0048_carton.jpg;fixtures/receiving/UNIT-0048_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-06T03:02:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0048",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0048_front.jpg;fixtures/prep/UNIT-0048_back.jpg;fixtures/prep/UNIT-0048_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-07T08:02:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0048",
+          "observed_findings": "Observed state: factory_sealed, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0048_1.jpg;fixtures/returns/UNIT-0048_2.jpg;fixtures/returns/UNIT-0048_3.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-24T08:02:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0048-2",
+      "unit_id": "UNIT-0048",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-CANDLE-3",
+      "charge_type": "refund_issued_item_not_returned",
+      "assessed_amount_usd": 0.0,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 15.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0048-2\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: refund_issued_item_not_returned ($0.00) for Unit UNIT-0048\nGoverning Policy: Customer Returns and Seller Reimbursements (45-Day Rule) (https://sellercentral.amazon.com/help/hub/reference/G200379860)\n\nCase Summary:\nThe fee of $0.00 assessed against unit UNIT-0048 (SKU: SKU-CANDLE-3) is contradicted by verified warehouse operational evidence. Under Customer Returns and Seller Reimbursements (45-Day Rule), we request a reimbursement credit of $15.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0048, 2026-06-06T03:02:00Z): Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0048_pallet.jpg;fixtures/receiving/UNIT-0048_carton.jpg;fixtures/receiving/UNIT-0048_unit.jpg]\n  - PREP_MANAGER (PRP-0048, 2026-06-07T08:02:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0048_front.jpg;fixtures/prep/UNIT-0048_back.jpg;fixtures/prep/UNIT-0048_label.jpg]\n  - RETURNS_MANAGER (RTN-0048, 2026-06-24T08:02:00Z): Observed state: factory_sealed, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0048_1.jpg;fixtures/returns/UNIT-0048_2.jpg;fixtures/returns/UNIT-0048_3.jpg]\n\nAction Requested:\nReimburse $15.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "Customer Returns and Seller Reimbursements (45-Day Rule)",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200379860",
+        "rule_key": "CUSTOMER_RETURN_45_DAY_POLICY"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0048",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0048_pallet.jpg;fixtures/receiving/UNIT-0048_carton.jpg;fixtures/receiving/UNIT-0048_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-06T03:02:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0048",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0048_front.jpg;fixtures/prep/UNIT-0048_back.jpg;fixtures/prep/UNIT-0048_label.jpg",
+          "operator_id": "op_ben",
+          "timestamp": "2026-06-07T08:02:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0048",
+          "observed_findings": "Observed state: factory_sealed, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0048_1.jpg;fixtures/returns/UNIT-0048_2.jpg;fixtures/returns/UNIT-0048_3.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-24T08:02:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0051-1",
+      "unit_id": "UNIT-0051",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.5,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 2.0,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0051-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.50) for Unit UNIT-0051\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.50 assessed against unit UNIT-0051 (SKU: SKU-CABLE-USBC) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $2.00.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0051, 2026-06-05T13:51:00Z): Intake qty=18, carton_dmg=uncertain, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0051_pallet.jpg;fixtures/receiving/UNIT-0051_carton.jpg;fixtures/receiving/UNIT-0051_unit.jpg]\n  - PREP_MANAGER (PRP-0051, 2026-06-06T02:51:00Z): FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible [Photos: fixtures/prep/UNIT-0051_front.jpg;fixtures/prep/UNIT-0051_back.jpg;fixtures/prep/UNIT-0051_label.jpg]\n\nAction Requested:\nReimburse $2.00 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0051",
+          "observed_findings": "Intake qty=18, carton_dmg=uncertain, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0051_pallet.jpg;fixtures/receiving/UNIT-0051_carton.jpg;fixtures/receiving/UNIT-0051_unit.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-05T13:51:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0051",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0051_front.jpg;fixtures/prep/UNIT-0051_back.jpg;fixtures/prep/UNIT-0051_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-06T02:51:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0063-1",
+      "unit_id": "UNIT-0063",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-LEASH-6FT",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0063",
+          "observed_findings": "Intake qty=12, carton_dmg=water, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0063_pallet.jpg;fixtures/receiving/UNIT-0063_carton.jpg;fixtures/receiving/UNIT-0063_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-06T08:06:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0063",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=uncertain",
+          "photo_refs": "fixtures/prep/UNIT-0063_front.jpg;fixtures/prep/UNIT-0063_back.jpg;fixtures/prep/UNIT-0063_label.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-06T16:06:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0081-1",
+      "unit_id": "UNIT-0081",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-PROT-1KG",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 4.25,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.75,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0081-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($4.25) for Unit UNIT-0081\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $4.25 assessed against unit UNIT-0081 (SKU: SKU-PROT-1KG) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.75.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0081, 2026-06-09T05:50:00Z): Intake qty=6, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0081_pallet.jpg;fixtures/receiving/UNIT-0081_carton.jpg;fixtures/receiving/UNIT-0081_unit.jpg]\n  - PREP_MANAGER (PRP-0081, 2026-06-09T23:50:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0081_front.jpg;fixtures/prep/UNIT-0081_back.jpg;fixtures/prep/UNIT-0081_label.jpg]\n  - RETURNS_MANAGER (RTN-0081, 2026-06-21T23:50:00Z): Observed state: opened_unused, disposition: restock, identity match: yes [Photos: fixtures/returns/UNIT-0081_1.jpg;fixtures/returns/UNIT-0081_2.jpg;fixtures/returns/UNIT-0081_3.jpg]\n\nAction Requested:\nReimburse $0.75 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0081",
+          "observed_findings": "Intake qty=6, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0081_pallet.jpg;fixtures/receiving/UNIT-0081_carton.jpg;fixtures/receiving/UNIT-0081_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-09T05:50:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0081",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0081_front.jpg;fixtures/prep/UNIT-0081_back.jpg;fixtures/prep/UNIT-0081_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-09T23:50:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0081",
+          "observed_findings": "Observed state: opened_unused, disposition: restock, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0081_1.jpg;fixtures/returns/UNIT-0081_2.jpg;fixtures/returns/UNIT-0081_3.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-21T23:50:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0084-1",
+      "unit_id": "UNIT-0084",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-BOTTLE-750",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 1.6,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0084-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0084\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0084 (SKU: SKU-BOTTLE-750) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $1.60.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0084, 2026-06-07T11:07:00Z): Intake qty=6, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0084_pallet.jpg;fixtures/receiving/UNIT-0084_carton.jpg;fixtures/receiving/UNIT-0084_unit.jpg]\n  - PREP_MANAGER (PRP-0084, 2026-06-07T20:07:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0084_front.jpg;fixtures/prep/UNIT-0084_back.jpg;fixtures/prep/UNIT-0084_label.jpg]\n\nAction Requested:\nReimburse $1.60 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0084",
+          "observed_findings": "Intake qty=6, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0084_pallet.jpg;fixtures/receiving/UNIT-0084_carton.jpg;fixtures/receiving/UNIT-0084_unit.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-07T11:07:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0084",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0084_front.jpg;fixtures/prep/UNIT-0084_back.jpg;fixtures/prep/UNIT-0084_label.jpg",
+          "operator_id": "op_chen",
+          "timestamp": "2026-06-07T20:07:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0090-1",
+      "unit_id": "UNIT-0090",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-MUG-11",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0090",
+          "observed_findings": "Intake qty=24, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0090_pallet.jpg;fixtures/receiving/UNIT-0090_carton.jpg;fixtures/receiving/UNIT-0090_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-04T05:12:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0090",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0090_front.jpg;fixtures/prep/UNIT-0090_back.jpg;fixtures/prep/UNIT-0090_label.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-05T12:12:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0093-1",
+      "unit_id": "UNIT-0093",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-CANDLE-3",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 5.1,
+      "verdict": "CONTRADICTED",
+      "claim_recommended": true,
+      "claim_amount_usd": 0.85,
+      "confidence_score": 0.96,
+      "dispute_grounds": "DISPUTE CLAIM FILING \u00b7 FEE-0093-1\nTarget: Amazon Seller Support / FBA Reimbursements Team\nSubject: Formal Dispute of Improper Fee: fulfilment_fee_weight_tier ($5.10) for Unit UNIT-0093\nGoverning Policy: FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy (https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW)\n\nCase Summary:\nThe fee of $5.10 assessed against unit UNIT-0093 (SKU: SKU-CANDLE-3) is contradicted by verified warehouse operational evidence. Under FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy, we request a reimbursement credit of $0.85.\n\nOperational Evidence Audit Trail:\n  - RECEIVING_MANAGER (RCV-0093, 2026-06-10T03:01:00Z): Intake qty=22, carton_dmg=none, unit_dmg=none, flags=none [Photos: fixtures/receiving/UNIT-0093_pallet.jpg;fixtures/receiving/UNIT-0093_carton.jpg;fixtures/receiving/UNIT-0093_unit.jpg]\n  - PREP_MANAGER (PRP-0093, 2026-06-10T19:01:00Z): FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required [Photos: fixtures/prep/UNIT-0093_front.jpg;fixtures/prep/UNIT-0093_back.jpg;fixtures/prep/UNIT-0093_label.jpg]\n  - RETURNS_MANAGER (RTN-0093, 2026-06-27T19:01:00Z): Observed state: damaged, disposition: liquidate, identity match: yes [Photos: fixtures/returns/UNIT-0093_1.jpg;fixtures/returns/UNIT-0093_2.jpg;fixtures/returns/UNIT-0093_3.jpg]\n\nAction Requested:\nReimburse $0.85 to seller balance and reverse the associated defect rate notation.",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0093",
+          "observed_findings": "Intake qty=22, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0093_pallet.jpg;fixtures/receiving/UNIT-0093_carton.jpg;fixtures/receiving/UNIT-0093_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-10T03:01:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0093",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=not_required, suffocation=not_required",
+          "photo_refs": "fixtures/prep/UNIT-0093_front.jpg;fixtures/prep/UNIT-0093_back.jpg;fixtures/prep/UNIT-0093_label.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-10T19:01:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0093",
+          "observed_findings": "Observed state: damaged, disposition: liquidate, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0093_1.jpg;fixtures/returns/UNIT-0093_2.jpg;fixtures/returns/UNIT-0093_3.jpg",
+          "operator_id": "op_dana",
+          "timestamp": "2026-06-27T19:01:00Z"
+        }
+      ],
+      "explanation_if_unsupported": null,
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0096-1",
+      "unit_id": "UNIT-0096",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-CABLE-USBC",
+      "charge_type": "inbound_defect_fee",
+      "assessed_amount_usd": 2.0,
+      "verdict": "UNCERTAIN",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.5,
+      "dispute_grounds": "Prep records contain uncertain or ambiguous inspection states.",
+      "cited_policy": {
+        "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+        "rule_key": "INBOUND_DEFECT_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0096",
+          "observed_findings": "Intake qty=48, carton_dmg=none, unit_dmg=none, flags=missing_components",
+          "photo_refs": "fixtures/receiving/UNIT-0096_pallet.jpg;fixtures/receiving/UNIT-0096_carton.jpg;fixtures/receiving/UNIT-0096_unit.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-07T04:16:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0096",
+          "observed_findings": "FNSKU=uncertain, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0096_front.jpg;fixtures/prep/UNIT-0096_back.jpg;fixtures/prep/UNIT-0096_label.jpg",
+          "operator_id": "op_fatima",
+          "timestamp": "2026-06-08T18:16:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Human review required: Operator flagged inspection certainty as 'uncertain'.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    },
+    {
+      "line_id": "FEE-0099-1",
+      "unit_id": "UNIT-0099",
+      "org_id": "org_demo_bravo",
+      "sku": "SKU-TOWEL-BLU",
+      "charge_type": "fulfilment_fee_weight_tier",
+      "assessed_amount_usd": 3.5,
+      "verdict": "SUPPORTED",
+      "claim_recommended": false,
+      "claim_amount_usd": 0.0,
+      "confidence_score": 0.95,
+      "dispute_grounds": "Fulfillment fee of $3.50 is within authoritative tier fee ($3.50).",
+      "cited_policy": {
+        "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier Dispute Policy",
+        "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+        "rule_key": "WEIGHT_TIER_OVERCHARGE_DISPUTE"
+      },
+      "evidence_chain": [
+        {
+          "manager": "RECEIVING_MANAGER",
+          "record_id": "RCV-0099",
+          "observed_findings": "Intake qty=12, carton_dmg=none, unit_dmg=none, flags=none",
+          "photo_refs": "fixtures/receiving/UNIT-0099_pallet.jpg;fixtures/receiving/UNIT-0099_carton.jpg;fixtures/receiving/UNIT-0099_unit.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-01T11:06:00Z"
+        },
+        {
+          "manager": "PREP_MANAGER",
+          "record_id": "PRP-0099",
+          "observed_findings": "FNSKU=flat, barcode_covered=yes, polybag=yes, suffocation=legible",
+          "photo_refs": "fixtures/prep/UNIT-0099_front.jpg;fixtures/prep/UNIT-0099_back.jpg;fixtures/prep/UNIT-0099_label.jpg",
+          "operator_id": "op_amira",
+          "timestamp": "2026-06-02T08:06:00Z"
+        },
+        {
+          "manager": "RETURNS_MANAGER",
+          "record_id": "RTN-0099",
+          "observed_findings": "Observed state: damaged, disposition: dispose, identity match: yes",
+          "photo_refs": "fixtures/returns/UNIT-0099_1.jpg;fixtures/returns/UNIT-0099_2.jpg;fixtures/returns/UNIT-0099_3.jpg",
+          "operator_id": "op_eli",
+          "timestamp": "2026-06-29T08:06:00Z"
+        }
+      ],
+      "explanation_if_unsupported": "Charge matches standard schedule; no overage detected.",
+      "human_override": {
+        "is_overridden": false,
+        "original_verdict": null,
+        "new_verdict": null,
+        "override_reason": null,
+        "operator_id": null,
+        "overridden_at": null
+      },
+      "evaluation_timestamp": "2026-09-29T04:46:55.401831Z"
+    }
+  ]
+}

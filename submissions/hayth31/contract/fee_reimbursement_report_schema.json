@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://sydon.ai/schemas/fee_reimbursement_report_schema.json",
+  "title": "FeeAndReimbursementReportSchema",
+  "description": "Standard schema for channel financial adjustment reports (fee charges, inventory adjustments, and reimbursements) parsed by Recovery Manager.",
+  "type": "object",
+  "required": ["report_id", "channel", "org_id", "generated_at", "records"],
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "description": "Unique identifier of the channel report document."
+    },
+    "channel": {
+      "type": "string",
+      "enum": ["AMAZON_FBA", "WALMART_WFS", "TIKTOK_FBT", "SHOPIFY_3PL", "GENERIC_CHANNEL"],
+      "default": "AMAZON_FBA"
+    },
+    "org_id": {
+      "type": "string",
+      "description": "Tenant organisation identifier (mandatory for tenancy isolation)."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FinancialRecord"
+      }
+    }
+  },
+  "definitions": {
+    "FinancialRecord": {
+      "type": "object",
+      "required": ["line_id", "report_type", "charge_type", "amount_usd", "posted_date"],
+      "properties": {
+        "line_id": {
+          "type": "string",
+          "description": "Unique identifier for this specific charge or ledger entry (e.g. FEE-0014-1)."
+        },
+        "report_type": {
+          "type": "string",
+          "enum": ["fee_report", "inventory_adjustment", "reimbursement_report"]
+        },
+        "unit_id": {
+          "type": ["string", "null"],
+          "description": "Universal unit identifier (e.g. UNIT-0014) linking cross-pod evidence."
+        },
+        "org_id": {
+          "type": "string",
+          "description": "Tenant identifier matching report root org_id."
+        },
+        "sku": {
+          "type": ["string", "null"],
+          "description": "Seller SKU (Stock Keeping Unit)."
+        },
+        "fnsku": {
+          "type": ["string", "null"],
+          "description": "Fulfillment Network SKU (e.g. X00DUMMY014)."
+        },
+        "fba_shipment_id": {
+          "type": ["string", "null"],
+          "description": "Inbound FBA shipment reference (e.g. FBA-DUMMY-101)."
+        },
+        "order_id": {
+          "type": ["string", "null"],
+          "description": "Customer order identifier (e.g. ORD-DUMMY-50014)."
+        },
+        "charge_type": {
+          "type": "string",
+          "enum": [
+            "inbound_defect_fee",
+            "fulfilment_fee_weight_tier",
+            "lost_inbound",
+            "damaged_in_warehouse",
+            "refund_issued_item_not_returned",
+            "unplanned_prep_fee",
+            "barcode_missing_or_unreadable",
+            "polybag_missing",
+            "suffocation_warning_missing",
+            "overweight_oversize_misclassification"
+          ]
+        },
+        "quantity": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "amount_usd": {
+          "type": "number",
+          "description": "Monetary fee (positive expense), reimbursement (positive credit), or adjustment (0.00 for pending loss claims)."
+        },
+        "posted_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date financial charge was posted on the marketplace ledger (YYYY-MM-DD)."
+        },
+        "dispute_deadline_date": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Calculated claim filing window based on channel dispute rules."
+        },
+        "description": {
+          "type": ["string", "null"],
+          "description": "Raw description or notes provided by the channel statement."
+        }
+      }
+    }
+  }
+}

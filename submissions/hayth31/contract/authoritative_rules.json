@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://sydon.ai/schemas/authoritative_rules.json",
+  "title": "AuthoritativeChannelDisputeRules",
+  "description": "Codified authoritative Amazon FBA policies, dispute conditions, evidence standards, and statutory dispute filing windows.",
+  "channel": "AMAZON_FBA",
+  "rules": {
+    "INBOUND_DEFECT_DISPUTE": {
+      "policy_name": "FBA Inbound Defect & Performance Fee Dispute Policy",
+      "source_url": "https://sellercentral.amazon.com/help/hub/reference/G201850100",
+      "dispute_window_days": 30,
+      "description": "Amazon charges inbound defect fees for labeling defects, packaging failures, or missing prep. Sellers may dispute if operational proof demonstrates compliance prior to carrier handoff.",
+      "applicable_charge_types": ["inbound_defect_fee", "unplanned_prep_fee", "barcode_missing_or_unreadable", "polybag_missing"],
+      "contradiction_criteria": {
+        "required_checks": [
+          "prep.fnsku_label_placement IN ['flat', 'on_curve']",
+          "prep.original_barcode_covered IN ['yes', 'not_required']",
+          "prep.polybag_present_sealed IN ['yes', 'not_required']",
+          "prep.suffocation_warning IN ['legible', 'not_required']",
+          "receiving.carton_damage IN ['none', 'tears']",
+          "receiving.unit_damage == 'none'",
+          "receiving.quality_flags IS NULL OR receiving.quality_flags != 'obvious_defect'"
+        ],
+        "verdict_if_met": "CONTRADICTED",
+        "verdict_if_defect_present": "SUPPORTED",
+        "verdict_if_evidence_missing": "SILENT",
+        "verdict_if_evidence_ambiguous": "UNCERTAIN"
+      },
+      "required_evidence_artifacts": ["prep_inspection_photo", "intake_condition_photo", "operator_timestamp_log"]
+    },
+    "WEIGHT_TIER_OVERCHARGE_DISPUTE": {
+      "policy_name": "FBA Fulfillment Fee Dimensional Weight Tier & Cubiscan Dispute Policy",
+      "source_url": "https://sellercentral.amazon.com/help/hub/reference/GABBX6GZPA8MSZGW",
+      "dispute_window_days": 90,
+      "description": "Dispute overcharged fulfillment fees caused by erroneous automated Cubiscan dimensional or scale weight measurements placing the unit in an incorrect weight tier.",
+      "applicable_charge_types": ["fulfilment_fee_weight_tier", "overweight_oversize_misclassification"],
+      "standard_sku_benchmarks": {
+        "SKU-CABLE-USBC": { "expected_tier": "Small Standard (under 4 oz)", "expected_fee_usd": 3.50 },
+        "SKU-BOTTLE-750": { "expected_tier": "Large Standard (under 1 lb)", "expected_fee_usd": 3.50 },
+        "SKU-CANDLE-3": { "expected_tier": "Large Standard (1 to 1.5 lb)", "expected_fee_usd": 4.25 },
+        "SKU-LAMP-LED": { "expected_tier": "Large Standard (under 1 lb)", "expected_fee_usd": 3.50 },
+        "SKU-LEASH-6FT": { "expected_tier": "Large Standard (under 1 lb)", "expected_fee_usd": 3.50 },
+        "SKU-MUG-11": { "expected_tier": "Large Standard (under 1 lb)", "expected_fee_usd": 3.50 },
+        "SKU-PROT-1KG": { "expected_tier": "Large Standard (under 1 lb)", "expected_fee_usd": 3.50 },
+        "SKU-PUZZLE-500": { "expected_tier": "Large Standard (under 1 lb)", "expected_fee_usd": 3.50 },
+        "SKU-SERUM-30": { "expected_tier": "Small Standard (under 4 oz)", "expected_fee_usd": 3.50 },
+        "SKU-TOWEL-BLU": { "expected_tier": "Large Standard (under 1 lb)", "expected_fee_usd": 3.50 }
+      },
+      "contradiction_criteria": {
+        "rule": "amount_usd > expected_fee_usd",
+        "verdict_if_met": "CONTRADICTED",
+        "claim_calculation": "amount_usd - expected_fee_usd"
+      }
+    },
+    "LOST_INBOUND_INVENTORY_DISPUTE": {
+      "policy_name": "FBA Lost and Damaged Inventory Reimbursement Policy",
+      "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200213130",
+      "dispute_window_days": 180,
+      "description": "Units checked in or dispatched to an Amazon FC that Amazon marks lost or adjusts out of inventory without paying a cash reimbursement.",
+      "applicable_charge_types": ["lost_inbound"],
+      "contradiction_criteria": {
+        "required_checks": [
+          "receiving.qty_received >= 1",
+          "fba_shipment_id IS NOT NULL",
+          "NOT EXISTS (reimbursement_report WHERE shipment_id = fba_shipment_id AND unit_id = fee.unit_id)"
+        ],
+        "verdict_if_met": "CONTRADICTED",
+        "verdict_if_already_reimbursed": "ALREADY_REIMBURSED"
+      }
+    },
+    "CUSTOMER_RETURN_45_DAY_POLICY": {
+      "policy_name": "Customer Returns and Seller Reimbursements (45-Day Rule)",
+      "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200379860",
+      "dispute_window_days": 60,
+      "description": "When Amazon refunds a customer on seller's behalf, the buyer must return the item within 45 days. If the unit was received at warehouse, or if 45 days elapsed without return or inventory restitution, claim is warranted.",
+      "applicable_charge_types": ["refund_issued_item_not_returned"],
+      "contradiction_criteria": {
+        "required_checks": [
+          "returns.identity_match == 'yes'",
+          "returns.captured_at IS NOT NULL"
+        ],
+        "verdict_if_unit_physically_returned": "CONTRADICTED",
+        "claim_statement": "Operational return log confirms item physically returned to facility and inspected; charge claiming item not returned is contradicted by physical scan."
+      }
+    },
+    "WAREHOUSE_DAMAGE_REIMBURSEMENT_RECONCILIATION": {
+      "policy_name": "FBA Warehouse Damage Reimbursement Reconciliation",
+      "source_url": "https://sellercentral.amazon.com/help/hub/reference/G200213130",
+      "applicable_charge_types": ["damaged_in_warehouse"],
+      "contradiction_criteria": {
+        "rule": "If report_type == 'reimbursement_report', amount_usd is a credit already received; no new claim should be filed.",
+        "verdict": "SUPPORTED_OR_RESOLVED"
+      }
+    }
+  }
+}
