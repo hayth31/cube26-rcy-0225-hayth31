@@ -36,8 +36,17 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+def find_data_dir():
+    curr = os.path.abspath(os.path.dirname(__file__))
+    for _ in range(6):
+        candidate = os.path.join(curr, "data")
+        if os.path.exists(os.path.join(candidate, "fee_report_sample.csv")):
+            return candidate
+        curr = os.path.dirname(curr)
+    return os.path.abspath(os.path.join(os.getcwd(), "data"))
+
 # Data paths
-data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "data"))
+data_dir = find_data_dir()
 fee_path = os.path.join(data_dir, "fee_report_sample.csv")
 rec_path = os.path.join(data_dir, "upstream", "receiving_sample.csv")
 prep_path = os.path.join(data_dir, "upstream", "prep_sample.csv")
@@ -140,20 +149,24 @@ with tab1:
         df_charges = pd.DataFrame(table_rows)
         st.dataframe(df_charges, use_container_width=True, height=480)
 
-        selected_line_id = st.selectbox("Select Charge to Audit Evidence:", [p.line_id for p in packages])
+        line_ids = [p.line_id for p in packages]
+        selected_line_id = st.selectbox("Select Charge to Audit Evidence:", line_ids) if line_ids else None
 
     with col_detail:
-        selected_pkg = next(p for p in packages if p.line_id == selected_line_id)
+        if not packages or not selected_line_id:
+            st.info("No charges available for this tenant.")
+        else:
+            selected_pkg = next((p for p in packages if p.line_id == selected_line_id), packages[0])
 
-        badge_cls = {
-            "CONTRADICTED": "badge-contradicted",
-            "SUPPORTED": "badge-supported",
-            "UNCERTAIN": "badge-uncertain",
-            "ALREADY_REIMBURSED": "badge-reimbursed"
-        }.get(selected_pkg.verdict, "badge-uncertain")
+            badge_cls = {
+                "CONTRADICTED": "badge-contradicted",
+                "SUPPORTED": "badge-supported",
+                "UNCERTAIN": "badge-uncertain",
+                "ALREADY_REIMBURSED": "badge-reimbursed"
+            }.get(selected_pkg.verdict, "badge-uncertain")
 
-        st.markdown(f"### Charge Audit: `{selected_pkg.line_id}` <span class='{badge_cls}'>{selected_pkg.verdict}</span>", unsafe_allow_html=True)
-        st.write(f"**Unit:** `{selected_pkg.unit_id or 'N/A'}` | **SKU:** `{selected_pkg.sku or 'N/A'}` | **Fee Amount:** `${selected_pkg.assessed_amount_usd:.2f}`")
+            st.markdown(f"### Charge Audit: `{selected_pkg.line_id}` <span class='{badge_cls}'>{selected_pkg.verdict}</span>", unsafe_allow_html=True)
+            st.write(f"**Unit:** `{selected_pkg.unit_id or 'N/A'}` | **SKU:** `{selected_pkg.sku or 'N/A'}` | **Fee Amount:** `${selected_pkg.assessed_amount_usd:.2f}`")
 
         # Cited Policy Card
         with st.expander("📜 Authoritative Amazon Policy Citation", expanded=True):
