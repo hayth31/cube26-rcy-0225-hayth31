@@ -1,9 +1,89 @@
 # Cube Buildathon · 05 · Recovery Manager
 
-**Commerce Context stream · Round 2 · Individual Build**
+**Commerce Context stream · Round 2 · Individual Build**  
+**Participant:** `hayth31` (`Haytham-31`)  
+**Submission Directory:** [`submissions/hayth31/`](submissions/hayth31/)  
+**Branch:** [`hayth31`](https://github.com/hayth31/cube26-rcy-0225-hayth31/tree/hayth31)
 
-> Five agents, one unit, one record that follows it.
-> A physical product arrives, gets prepped, gets shipped, comes back. At every step a person makes a fast judgment that nobody records. **You build the agent that makes one of those judgments, and leaves proof.**
+---
+
+## 🏆 Round 2 Solution Overview & Submission Index
+
+Recovery Manager is an autonomous, evidence-driven fee dispute engine. Operating strictly without cameras (Position 5 of 5: Money Back), it reconciles financial charges deducted by ecommerce channels (Amazon FBA) against physical operational records generated upstream by Receiving, Prep, Pack, and Returns Managers.
+
+### Key Results & Benchmarks
+- **Claim Precision:** **100.0%** (23/23 valid claims, 0 false claims on 50-case benchmark).
+- **Claim Recall:** **100.0%** (Zero recoverable dollars left behind).
+- **`UNCERTAIN` Deferral Rate:** **14.0%** (Accurately defers ambiguous evidence for operator sign-off).
+- **Tenancy Isolation:** Forced Row-Level Security (`org_demo_alpha` vs `org_demo_bravo`) with HMAC-salted asset paths.
+- **Operating Cost:** **$0.00** (Google Gemini 2.0 Flash Free Tier + deterministic fail-open legal synthesizer).
+
+### Submission Deliverables Index
+- 📄 **Executive Architecture:** [`ARCHITECTURE.md`](ARCHITECTURE.md)
+- ✉️ **Customer Letter:** [`submissions/hayth31/01-customer-letter.md`](submissions/hayth31/01-customer-letter.md)
+- 📰 **PR/FAQ:** [`submissions/hayth31/02-prfaq.md`](submissions/hayth31/02-prfaq.md)
+- 📊 **One-Pager with Kill Condition:** [`submissions/hayth31/03-one-pager.md`](submissions/hayth31/03-one-pager.md)
+- 📜 **Durable Rules & Constraints:** [`submissions/hayth31/CLAUDE.md`](submissions/hayth31/CLAUDE.md)
+- 🛠️ **Build Brief:** [`submissions/hayth31/build-brief.md`](submissions/hayth31/build-brief.md)
+- ⏱️ **Build Log:** [`submissions/hayth31/build-log.md`](submissions/hayth31/build-log.md)
+- 📈 **Evaluation Report & Failure Modes:** [`submissions/hayth31/eval-report.md`](submissions/hayth31/eval-report.md)
+- 🤝 **Cross-Pod Schemas & Contracts:** [`submissions/hayth31/contract/`](submissions/hayth31/contract/)
+- 💻 **Agent Core Implementation:** [`submissions/hayth31/agent/`](submissions/hayth31/agent/)
+- 🌐 **Interactive Streamlit Web Dashboard:** [`submissions/hayth31/agent/web/app.py`](submissions/hayth31/agent/web/app.py)
+
+---
+
+## 🚀 Setup & Usage Instructions
+
+### 1. Installation
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/hayth31/cube26-rcy-0225-hayth31.git
+cd cube26-rcy-0225-hayth31
+pip install -r requirements.txt
+```
+
+### 2. Run Headless Recovery Agent
+Processes the complete 61-charge dataset across all tenants:
+```bash
+cd submissions/hayth31/agent
+python run_recovery.py
+```
+
+### 3. Run Automated Unit Tests (14 Tests covering all 8 scenarios)
+```bash
+cd submissions/hayth31/agent
+python -m unittest discover tests
+```
+
+### 4. Run Benchmark Evaluation
+Evaluates Precision, Recall, and Kappa agreement on the 50-unit benchmark:
+```bash
+cd submissions/hayth31/agent
+python evaluate.py
+```
+
+### 5. Launch Interactive Evidence Record Dashboard
+```bash
+cd submissions/hayth31/agent
+streamlit run web/app.py
+```
+Open your browser at `http://localhost:8501` to explore:
+- Multi-tenant isolation switcher (`org_demo_alpha` vs `org_demo_bravo`).
+- Drill-down charge inspector displaying matched photos and receiving/prep/pack/returns records.
+- Authoritative Amazon policy citations and formal dispute letters.
+- Operator override panel capturing human supervision reasons.
+
+---
+
+## 🔍 Assumptions & Limitations
+
+1. **Structured Records Input:** Recovery Manager assumes upstream managers have recorded their judgments into structured records. If a unit was never logged by an upstream manager, Recovery Manager strictly outputs `SILENT` (Rule: Do not invent evidence).
+2. **Conservative Claim Threshold:** The agent prioritizes precision over recall. A marginal fee with unclear barcode scannability is classified as `UNCERTAIN` rather than auto-disputed, protecting the merchant's Amazon account standing.
+3. **Statutory Filing Windows:** Amazon enforces strict dispute windows (30 days for inbound defect fees, 90 days for weight tiers, 180 days for lost inventory). Claims for charges past these windows are flagged as non-recoverable.
+4. **Channel Policy Volatility:** Amazon frequently updates fee schedules. While codified rules are grounded in published policies, regular catalog updates are required when Amazon modifies dimensional weight divisor thresholds.
+
+---
 
 **New here? Read these first:**
 
